@@ -1,29 +1,22 @@
+import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class q_2785_Sort_Vowels_in_a_String {
     public static String sortVowels(String s) {
-        StringBuilder str = new StringBuilder();
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i' || s.charAt(i) == 'o' || s.charAt(i) == 'u'
-                    || s.charAt(i) == 'A' || s.charAt(i) == 'E' || s.charAt(i) == 'I' || s.charAt(i) == 'O' || s.charAt(i) == 'U') {
-                str.append(s.charAt(i));
+        char[] str = s.toCharArray();
+        PriorityQueue<Character> pq = new PriorityQueue<>();
+        for (char c : str) {
+            if ("AEIOUaeiou".indexOf(c) != -1) {
+                pq.offer(c);
             }
         }
-//        for (int i = 0; i < s.length(); i++) {
-//            if (s.charAt(i) != 'a' || s.charAt(i) != 'e' || s.charAt(i) != 'i' || s.charAt(i) != 'o' || s.charAt(i) != 'u'
-//                    || s.charAt(i) != 'A' || s.charAt(i) != 'E' || s.charAt(i) != 'I' || s.charAt(i) != 'O' || s.charAt(i) != 'U') {
-//                str.append(s.charAt(i));
-//            }
-//        }
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) != 'a' && s.charAt(i) != 'e' && s.charAt(i) != 'i' && s.charAt(i) != 'o' && s.charAt(i) != 'u'
-                    && s.charAt(i) != 'A' && s.charAt(i) != 'E' && s.charAt(i) != 'I' && s.charAt(i) != 'O' && s.charAt(i) != 'U') {
-                str.append(s.charAt(i));
+        for (int i = 0; i < str.length; i++) {
+            if ("AEIOUaeiou".indexOf(str[i]) != -1 && !pq.isEmpty()) {
+                str[i] = pq.poll();
             }
         }
-        return str.toString();
+        return new String(str);
     }
-    // lEetcOde
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
