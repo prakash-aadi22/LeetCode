@@ -40,7 +40,7 @@ public class q_234_Palindrome_Linked_List {
     }
 
     public static void main(String[] args) {
-        System.out.println("Enter the List values --> ");
+        System.out.print("Enter the List values --> ");
         ListNode head = takeInput();
         System.out.println(isPalindrome(head));
     }

@@ -46,11 +46,10 @@ public class q_21_Merge_Two_Sorted_Lists {
     }
 
     public static void main(String[] args) {
-        System.out.println("First LinkedList --> ");
+        System.out.print("First LinkedList --> ");
         ListNode head1 = takeInput();
-        System.out.println("Second LinkedList --> ");
+        System.out.print("Second LinkedList --> ");
         ListNode head2 = takeInput();
-        mergeTwoLists(head1, head2);
-        print(mergeTwoLists(head1, head2)); // not working
+        print(mergeTwoLists(head1, head2));
     }
 }

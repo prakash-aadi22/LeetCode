@@ -40,9 +40,8 @@ public class q_83_Remove_Duplicates_from_Sorted_List {
     }
 
     public static void main(String[] args) {
-        System.out.println("LinkedList Value --> ");
+        System.out.print("LinkedList Value --> ");
         ListNode head1 = takeInput();
-        deleteDuplicates(head1);
-        print(deleteDuplicates(head1)); // not working
+        print(deleteDuplicates(head1));
     }
 }
