@@ -4,10 +4,8 @@ public class changing_questions_format {
 
     public static String change(String input) {
         input = input.trim();
-//        input = input.replace(" ", "_").replace(".", "").replace("-", "_");
-//        input = input.replace(".", "");
-//        input = input.replaceAll("[ !'?,-]", "_");
-        input = input.replace(".", "").replaceAll("[ !'?,-]", "_");
+        input = input.replace(".", "").replaceAll("[{()}]", "");
+        input = input.replaceAll("[ !'?,-]", "_");
         return "q_" + input;
     }
 
