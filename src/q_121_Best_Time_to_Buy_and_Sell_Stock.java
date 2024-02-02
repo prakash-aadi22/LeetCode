@@ -3,22 +3,6 @@ import java.util.Scanner;
 public class q_121_Best_Time_to_Buy_and_Sell_Stock {
 
     public static int maxProfit(int[] prices) {
-        // Wrong for [2,4,1] but correct for [7,6,4,3,1] and [7,1,5,3,6,4]
-//        int min = Integer.MAX_VALUE, minIndex = 0;
-//        for (int i = 0; i < prices.length; i++) {
-//            if (prices[i] < min) {
-//                min = prices[i];
-//                minIndex = i;
-//            }
-//        }
-//        int max = Integer.MIN_VALUE;
-//        for (int i = minIndex; i < prices.length; i++) {
-//            if (prices[i] > max) {
-//                max = prices[i];
-//            }
-//        }
-//        return (max - min);
-
         int profit = 0;
         int buyAmt = Integer.MAX_VALUE;
         for (int i = 0; i < prices.length; i++) {

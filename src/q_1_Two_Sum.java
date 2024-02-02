@@ -24,7 +24,8 @@ public class q_1_Two_Sum {
             System.out.print("Enter the value of " + i + " element of the array: ");
             arr[i] = sc.nextInt();
         }
-        int sum = sc.nextInt();
-        System.out.println(Arrays.toString(twoSum(arr, sum)));
+        System.out.print("Enter the value of the target: ");
+        int t = sc.nextInt();
+        System.out.println(Arrays.toString(twoSum(arr, t)));
     }
 }
