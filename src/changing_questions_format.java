@@ -13,7 +13,6 @@ public class changing_questions_format {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the input: ");
         String input = sc.nextLine(); // 1. Two Sum
-        String className = change(input);
-        System.out.println(className); // q_1_Two_Sum
+        System.out.println(change(input)); // q_1_Two_Sum
     }
 }
