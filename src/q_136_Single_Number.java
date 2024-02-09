@@ -21,8 +21,7 @@ public class q_136_Single_Number {
             }
         }
         Iterator<Integer> iterator = set.iterator();
-        Integer singleOne = iterator.next();
-        return singleOne;
+        return iterator.next();
     }
 
     public static void main(String[] args) {
