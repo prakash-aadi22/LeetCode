@@ -43,7 +43,7 @@ public class q_31_Next_Permutation {
         int l = sc.nextInt();
         int[] arr = new int[l];
         for (int i = 0; i < arr.length; i++) {
-            System.out.print("Enter the String for the " + i + " index: ");
+            System.out.print("Enter the value for the " + i + " index: ");
             arr[i] = sc.nextInt();
         }
         nextPermutation(arr);

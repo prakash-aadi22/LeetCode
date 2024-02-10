@@ -2,19 +2,28 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main_Copy {
-    public static void charValue() {
-        String a = "hello2";
-        System.out.println(a.charAt(a.length() - 1));
-        System.out.println(a.charAt(a.length() - 1) - '0');
-        System.out.println(a.charAt(a.length() - 1) - '1');
-        System.out.println(a.charAt(a.length() - 1) - 'a');
-        System.out.println(a.charAt(a.length() - 1) - '2');
-        System.out.println(a.charAt(a.length() - 1) - '3');
+public class q_841_Keys_and_Rooms {
+    public static boolean canVisitAllRooms(List<List<Integer>> rooms) {
+        boolean[] visited = new boolean[rooms.size()];
+        canVisitAllRoomsAux(rooms, 0, visited);
+        for (boolean b : visited) {
+            if (!b) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void canVisitAllRoomsAux(List<List<Integer>> rooms, int room, boolean[] visited) {
+        visited[room] = true;
+        for (int i = 0; i < rooms.get(room).size(); i++) {
+            if (!visited[rooms.get(room).get(i)]) {
+                canVisitAllRoomsAux(rooms, rooms.get(room).get(i), visited);
+            }
+        }
     }
 
     public static void main(String[] args) {
-        charValue();
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of rows: ");
         int rows = sc.nextInt();
@@ -29,12 +38,6 @@ public class Main_Copy {
             }
             my2DList.add(row);
         }
-        System.out.println("Entered 2D list:");
-        for (List<Integer> row : my2DList) {
-            for (int element : row) {
-                System.out.print(element + " ");
-            }
-            System.out.println();
-        }
+        System.out.println(canVisitAllRooms(my2DList));
     }
 }
