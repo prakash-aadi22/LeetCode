@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class changing_questions_format {
-
     public static String change(String input) {
         input = input.trim();
         input = input.replaceAll("[.:]", "").replaceAll("[{()}]", "");
